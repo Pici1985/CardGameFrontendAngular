@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  clickSubject:Subject<any> = new Subject();
   title = 'AngularProject';
+  
+  handleEvent() {
+    this.clickSubject.next(1);
+  }
 }
