@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-
+import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-create-character',
@@ -8,34 +7,60 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./create-character.component.css']
 })
 export class CreateCharacterComponent {
-  name = new FormControl('', [Validators.required, Validators.email]);
-  class = new FormControl('', [Validators.required, Validators.email]);
-  level = new FormControl('', [Validators.required, Validators.email]);
+  exampleForm: FormGroup = new FormGroup({
+    name: new FormControl('', Validators.required),
+    class: new FormControl('', Validators.required),
+    level: new FormControl('', Validators.required),
+    ke: new FormControl('', Validators.required),
+    te: new FormControl('', Validators.required),
+    ve: new FormControl('', Validators.required),
+    fp: new FormControl('', Validators.required),
+    ep: new FormControl('', Validators.required),
+    sfe: new FormControl('', Validators.required),
+    spj: new FormControl('', Validators.required),
+    spb: new FormControl('', Validators.required),
+  });
+  
+  errorMessage = 'This field is required, please enter a value!';
 
-  getErrorMessage(input: FormControl ) {
-    if(input == this.name){
-      if (this.name.hasError('required')) {
-        return 'You must enter a value';
-      }
-  
-      return this.name.hasError('name') ? 'Not a valid name' : '';
-    }
+  constructor(){ }
 
-    if(input == this.class){
-      if (this.class.hasError('required')) {
-        return 'You must enter a value';
-      }
-  
-      return this.class.hasError('class') ? 'Not a valid class' : '';
-    }
-    if(input == this.level){
-      if (this.level.hasError('required')) {
-        return 'You must enter a value';
-      }
-  
-      return this.level.hasError('level') ? 'Not a valid level' : '';
-    }
-    
-    return this.name.hasError('name') ? 'Not a valid name' : '';
+  get name(){
+    return this.exampleForm.get('name');
   }
+  get class(){
+    return this.exampleForm.get('class');
+  }
+  get level(){
+    return this.exampleForm.get('level');
+  }
+  get ke(){
+    return this.exampleForm.get('ke');
+  }
+  get te(){
+    return this.exampleForm.get('te');
+  }
+  get ve(){
+    return this.exampleForm.get('ve');
+  }
+  get fp(){
+    return this.exampleForm.get('fp');
+  }
+  get ep(){
+    return this.exampleForm.get('ep');
+  }
+  get sfe(){
+    return this.exampleForm.get('sfe');
+  }
+  get spj(){
+    return this.exampleForm.get('spj');
+  }
+  get spb(){
+    return this.exampleForm.get('spb');
+  }
+  
+  onSubmit(){ 
+    console.log(this.exampleForm.value)
+    this.exampleForm.reset();
+  } 
 }

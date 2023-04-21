@@ -7,6 +7,10 @@ mat-card-content {
     display: grid;
 }
 
+h1 {
+    margin: 25px 0;
+}
+
 .wrapper {
     border: none;
     width: calc(100vw - 210px);
@@ -14,6 +18,16 @@ mat-card-content {
     text-align: center; 
 }
 
-h1 {
-    margin: 25px 0;
+.numeric-field-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 0px;
+}
+
+.numeric-field-item{
+    
 }
