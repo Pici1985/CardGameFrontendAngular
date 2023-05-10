@@ -8,7 +8,7 @@ import { MaterialExampleModule } from '../material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ToolbarOverviewExampleComponent } from './Components/toolbar-overview-example/toolbar-overview-example.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -19,6 +19,11 @@ import { CreateCharacterComponent } from './Components/create-character/create-c
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './Components/about/about.component';
+import { BlogComponent } from './Components/blog/blog.component';
+import { ProjectsComponent } from './Components/projects/projects.component';
+import { ContactComponent } from './Components/contact/contact.component';
+
 
 
 
@@ -31,6 +36,10 @@ import { HttpClientModule } from '@angular/common/http';
     CharacterListComponent,
     CreateCharacterComponent,
     HomePageComponent,
+    AboutComponent,
+    BlogComponent,
+    ProjectsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
