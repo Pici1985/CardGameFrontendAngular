@@ -23,6 +23,7 @@ import { AboutComponent } from './Components/about/about.component';
 import { BlogComponent } from './Components/blog/blog.component';
 import { ProjectsComponent } from './Components/projects/projects.component';
 import { ContactComponent } from './Components/contact/contact.component';
+import { DetailsComponent } from './Components/details/details.component';
 
 
 
@@ -40,6 +41,7 @@ import { ContactComponent } from './Components/contact/contact.component';
     BlogComponent,
     ProjectsComponent,
     ContactComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
