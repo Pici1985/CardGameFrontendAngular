@@ -22,3 +22,8 @@
 .nav-button {
     margin: 5px 0px;
 }
+
+mat-drawer {
+    background-color: darkgrey;
+}
+
